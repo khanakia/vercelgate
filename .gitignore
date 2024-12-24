@@ -1,0 +1,23 @@
+vendor
+.env
+
+# ignore all files starting with . or ~
+##.*
+~*
+
+# ignore OS generated files
+.sass-cache
+.DS_Store
+ehthumbs.db
+Thumbs.db
+*.idea
+*.TMP
+*.tmp
+.vscode-upload.json
+node_modules/
+yarn.lock
+
+tmp/
+vercelgate
+dist/
+vercelgate.db
