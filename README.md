@@ -67,6 +67,39 @@ vercelgate reset
 It will reset all the synced vercel accounts with vercelgate.
 
 
+## Example
+```sh
+➜ ✗ vercelgate switch
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select Account: 
+  ▸ Jane Doe (jandoe@gmail.com)
+
+Switched to user Jane Doe
+
+
+➜ ✗ vercelgate new   
+you can now add new account using `vercel login` and then run `vercelgate sync` again
+
+
+➜ ✗ vercel login  
+Vercel CLI 34.0.0
+? Log in to Vercel Continue with Email
+? Enter your email address: dummy@gmail.com
+We sent an email to dummy@gmail.com. Please follow the steps provided inside it and make sure the security code matches Eager Bornean Orang-utan.
+> Success! Email authentication complete for dummy@gmail.com
+
+
+➜ ✗ vercelgate sync  
+synced successfully
+
+➜ ✗ vercelgate switch
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select Account: 
+  ▸ Jane Doe (jandoe@gmail.com)
+    dummy (dummy@gmail.com)
+
+```
+
 ## Features
 
 - **Simple Account Switching**: Quickly switch between different Vercel accounts without logging out.

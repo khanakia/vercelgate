@@ -79,8 +79,13 @@ var switchCmd = &cobra.Command{
 	Use:   "switch",
 	Short: "Switch between account",
 	Run: func(cmd *cobra.Command, args []string) {
+		err := SwitchCmd(false)
 
-		SwitchCmd(false)
+		if err != nil {
+			log.Fatal(err)
+
+			return
+		}
 	},
 }
 
@@ -88,20 +93,24 @@ var switchTeamCmd = &cobra.Command{
 	Use:   "switchteam",
 	Short: "Switch between account and teams",
 	Run: func(cmd *cobra.Command, args []string) {
-		SwitchCmd(true)
+		err := SwitchCmd(true)
+
+		if err != nil {
+			log.Fatal(err)
+
+			return
+		}
 	},
 }
 
 func SwitchCmd(switchTeam bool) error {
 	user, err := promptGetUser()
 	if err != nil {
-		log.Fatal(err)
 		return err
 	}
 
 	err = vercelutil.SetAuthToken(user.Token)
 	if err != nil {
-		log.Fatal(err)
 		return err
 	}
 
@@ -110,13 +119,11 @@ func SwitchCmd(switchTeam bool) error {
 	if switchTeam {
 		team, err := promptGetTeam(user.ID)
 		if err != nil {
-			log.Fatal(err)
 			return err
 		}
 
 		err = vercelutil.SetCurrentTeam(team.ID)
 		if err != nil {
-			log.Fatal(err)
 			return err
 		}
 
@@ -134,7 +141,6 @@ func promptGetTeam(userID string) (*ent.Team, error) {
 	items, err := entdb.Client().Team.Query().Where(team.UserID(userID)).All(ctx)
 
 	if err != nil {
-		log.Fatal(err)
 		return nil, err
 	}
 
@@ -152,8 +158,7 @@ func promptGetTeam(userID string) (*ent.Team, error) {
 	index, _, err := prompt.Run()
 
 	if err != nil {
-		fmt.Printf("Prompt failed %v\n", err)
-		return nil, err
+		return nil, fmt.Errorf("Prompt failed %v\n", err)
 	}
 
 	return items[index], nil
@@ -165,8 +170,11 @@ func promptGetUser() (*ent.User, error) {
 	users, err := entdb.Client().User.Query().All(ctx)
 
 	if err != nil {
-		log.Fatal(err)
 		return nil, err
+	}
+
+	if len(users) == 0 {
+		return nil, fmt.Errorf("no accounts synced yet. please sync first using `vercelgate sync`")
 	}
 
 	usersList := []string{}
