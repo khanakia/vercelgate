@@ -55,4 +55,7 @@ release:
 
 brews:
   - name: vercelgate
-    homepage: https://github.com/khanakia/homebrew-vercelgate
+    homepage: https://github.com/khanakia/vercelgate
+    repository:
+      owner: khanakia
+      name: homebrew-vercelgate
