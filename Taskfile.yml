@@ -2,6 +2,8 @@
 
 version: "3"
 
+dotenv: [".env"]
+
 tasks:
   entg:
     desc: regenerate ent code after we make any edits to `schema/*.go`
@@ -13,3 +15,8 @@ tasks:
     # deps: [entg]
     cmds:
       - go run ./cmd/dbmigrate
+
+  release:
+    desc: release binary to github
+    cmds:
+      - goreleaser release --clean --skip=validate

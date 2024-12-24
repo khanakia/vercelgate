@@ -1,10 +1,12 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
 
-# The lines bellow are called `modelines`. See `:help modeline`
+# The lines below are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/need to use them.
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
+
+version: 2
 
 before:
   hooks:
@@ -16,13 +18,12 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-
-    binary: "vercelgate"
-
     goos:
       - linux
       - windows
       - darwin
+
+    binary: "vercelgate"
 
 archives:
   - format: tar.gz
@@ -46,9 +47,12 @@ changelog:
       - "^docs:"
       - "^test:"
 
+release:
+  footer: >-
+
+    ---
+    released by vercelgate
+
 brews:
   - name: vercelgate
     homepage: https://github.com/khanakia/homebrew-vercelgate
-    tap:
-      owner: khanakia
-      name: homebrew-vercelgate
