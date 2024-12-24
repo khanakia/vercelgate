@@ -5,13 +5,12 @@ package enttest
 import (
 	"context"
 
-	"app/gen/ent"
+	"github.com/khanakia/vercelgate/gen/ent"
 	// required by schema hooks.
-	_ "app/gen/ent/runtime"
-
-	"app/gen/ent/migrate"
+	_ "github.com/khanakia/vercelgate/gen/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
+	"github.com/khanakia/vercelgate/gen/ent/migrate"
 )
 
 type (

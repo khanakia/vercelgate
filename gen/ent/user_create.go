@@ -3,8 +3,6 @@
 package ent
 
 import (
-	"app/gen/ent/team"
-	"app/gen/ent/user"
 	"context"
 	"errors"
 	"fmt"
@@ -13,6 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/khanakia/vercelgate/gen/ent/team"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // UserCreate is the builder for creating a User entity.

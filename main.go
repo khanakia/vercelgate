@@ -1,19 +1,20 @@
 package main
 
 import (
-	"app/gen/ent"
-	"app/gen/ent/team"
-	"app/pkg/constants"
-	"app/pkg/entcfn"
-	"app/pkg/entdb"
-	"app/pkg/utils"
-	"app/pkg/vercelfn"
-	"app/pkg/vercelutil"
 	"context"
 	"fmt"
 	"log"
 	"os"
 	"path/filepath"
+
+	"github.com/khanakia/vercelgate/gen/ent"
+	"github.com/khanakia/vercelgate/gen/ent/team"
+	"github.com/khanakia/vercelgate/pkg/constants"
+	"github.com/khanakia/vercelgate/pkg/entcfn"
+	"github.com/khanakia/vercelgate/pkg/entdb"
+	"github.com/khanakia/vercelgate/pkg/utils"
+	"github.com/khanakia/vercelgate/pkg/vercelfn"
+	"github.com/khanakia/vercelgate/pkg/vercelutil"
 
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"

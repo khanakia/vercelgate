@@ -1,10 +1,11 @@
 package entcfn
 
 import (
-	"app/gen/ent/migrate"
-	"app/pkg/entdb"
 	"context"
 	"log"
+
+	"github.com/khanakia/vercelgate/gen/ent/migrate"
+	"github.com/khanakia/vercelgate/pkg/entdb"
 )
 
 func Migrate() error {

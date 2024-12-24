@@ -3,12 +3,12 @@
 package ent
 
 import (
-	"app/gen/ent/user"
 	"fmt"
 	"strings"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // User is the model entity for the User schema.

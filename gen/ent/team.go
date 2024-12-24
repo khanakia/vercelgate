@@ -3,13 +3,13 @@
 package ent
 
 import (
-	"app/gen/ent/team"
-	"app/gen/ent/user"
 	"fmt"
 	"strings"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/khanakia/vercelgate/gen/ent/team"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // Team is the model entity for the Team schema.

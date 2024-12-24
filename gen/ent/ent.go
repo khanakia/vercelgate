@@ -3,8 +3,6 @@
 package ent
 
 import (
-	"app/gen/ent/team"
-	"app/gen/ent/user"
 	"context"
 	"errors"
 	"fmt"
@@ -14,6 +12,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/khanakia/vercelgate/gen/ent/team"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // ent aliases to avoid import conflicts in user's code.

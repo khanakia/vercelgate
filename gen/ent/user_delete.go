@@ -3,13 +3,13 @@
 package ent
 
 import (
-	"app/gen/ent/predicate"
-	"app/gen/ent/user"
 	"context"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/khanakia/vercelgate/gen/ent/predicate"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // UserDelete is the builder for deleting a User entity.

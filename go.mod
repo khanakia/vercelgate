@@ -1,4 +1,4 @@
-module app
+module github.com/khanakia/vercelgate
 
 go 1.23.0
 

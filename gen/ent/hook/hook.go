@@ -3,9 +3,10 @@
 package hook
 
 import (
-	"app/gen/ent"
 	"context"
 	"fmt"
+
+	"github.com/khanakia/vercelgate/gen/ent"
 )
 
 // The TeamFunc type is an adapter to allow the use of ordinary

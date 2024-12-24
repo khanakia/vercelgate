@@ -6,12 +6,11 @@ import (
 	"context"
 	"fmt"
 
-	"app/gen/ent"
-	"app/gen/ent/predicate"
-	"app/gen/ent/team"
-	"app/gen/ent/user"
-
 	"entgo.io/ent/dialect/sql"
+	"github.com/khanakia/vercelgate/gen/ent"
+	"github.com/khanakia/vercelgate/gen/ent/predicate"
+	"github.com/khanakia/vercelgate/gen/ent/team"
+	"github.com/khanakia/vercelgate/gen/ent/user"
 )
 
 // The Query interface represents an operation that queries a graph.

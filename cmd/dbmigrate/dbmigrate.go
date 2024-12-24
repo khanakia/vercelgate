@@ -1,10 +1,11 @@
 package main
 
 import (
-	"app/gen/ent"
-	"app/gen/ent/migrate"
 	"context"
 	"log"
+
+	"github.com/khanakia/vercelgate/gen/ent"
+	"github.com/khanakia/vercelgate/gen/ent/migrate"
 
 	_ "github.com/mattn/go-sqlite3"
 )

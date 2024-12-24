@@ -3,10 +3,9 @@
 package user
 
 import (
-	"app/gen/ent/predicate"
-
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/khanakia/vercelgate/gen/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

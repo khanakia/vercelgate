@@ -3,13 +3,13 @@
 package ent
 
 import (
-	"app/gen/ent/predicate"
-	"app/gen/ent/team"
 	"context"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/khanakia/vercelgate/gen/ent/predicate"
+	"github.com/khanakia/vercelgate/gen/ent/team"
 )
 
 // TeamDelete is the builder for deleting a Team entity.

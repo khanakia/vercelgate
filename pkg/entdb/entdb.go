@@ -1,10 +1,11 @@
 package entdb
 
 import (
-	"app/gen/ent"
-	"app/pkg/vercelutil"
 	"fmt"
 	"log"
+
+	"github.com/khanakia/vercelgate/gen/ent"
+	"github.com/khanakia/vercelgate/pkg/vercelutil"
 )
 
 var client *ent.Client

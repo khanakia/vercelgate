@@ -1,13 +1,14 @@
 package vercelutil
 
 import (
-	"app/pkg/jsonupdate"
-	"app/pkg/utils"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/khanakia/vercelgate/pkg/jsonupdate"
+	"github.com/khanakia/vercelgate/pkg/utils"
 
 	"github.com/adrg/xdg"
 )

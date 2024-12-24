@@ -1,10 +1,11 @@
 package vercelfn
 
 import (
-	"app/pkg/entdb"
-	"app/pkg/vercelapi"
-	"app/pkg/vercelutil"
 	"context"
+
+	"github.com/khanakia/vercelgate/pkg/entdb"
+	"github.com/khanakia/vercelgate/pkg/vercelapi"
+	"github.com/khanakia/vercelgate/pkg/vercelutil"
 )
 
 // Sycn user and team to database from auth.json file
