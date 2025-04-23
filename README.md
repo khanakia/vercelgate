@@ -23,6 +23,12 @@ vercelgate --help
 vercelgate init
 ```
 
+## Ubuntu
+
+For ubuntu vercel configuration is stored in `~/.local/share/com.vercel.cli/` instead of `~/.config/com.vercel.cli/`
+
+Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.local/share/com.vercel.cli/* ~/.config/com.vercel.cli/`
+
 ## Usage
 
 To begin using **vercelgate**, first perform the initialization:
@@ -116,3 +122,7 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 - **Team Management**: Switch between teams within accounts
 - **Configuration Access**: View global configuration paths for troubleshooting
 - **Command-Line Interface**: Easy-to-use CLI for all operations
+
+## TODO
+
+- [ ] Auto detect Ubuntu config file path

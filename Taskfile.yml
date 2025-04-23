@@ -16,6 +16,12 @@ tasks:
     cmds:
       - go run ./cmd/dbmigrate
 
+  tag:
+    desc: tag the current commit
+    cmds:
+      - git tag -a v0.0.2 -m "updates"
+      - git push origin v0.0.2
+
   release:
     desc: release binary to github
     cmds:
