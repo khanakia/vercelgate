@@ -23,12 +23,6 @@ vercelgate --help
 vercelgate init
 ```
 
-## Ubuntu
-
-For ubuntu vercel configuration is stored in `~/.local/share/com.vercel.cli/` instead of `~/.config/com.vercel.cli/`
-
-Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.local/share/com.vercel.cli/* ~/.config/com.vercel.cli/`
-
 ## Usage
 
 To begin using **vercelgate**, first perform the initialization:
@@ -45,17 +39,47 @@ vercelgate --help
 
 This will display a list of available commands and options to tailor your account management experience.
 
+## Commands
+
+### Version
+
+```bash
+vercelgate --version
+```
+
+Displays the current version of vercelgate installed on your system.
+
+### Initialize
+
+```bash
+vercelgate init
+```
+
+Initializes vercelgate for first-time use. This command sets up the necessary configuration and database.
+
+## Ubuntu
+
+For ubuntu vercel configuration is stored in `~/.local/share/com.vercel.cli/` instead of `~/.config/com.vercel.cli/`
+
+Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.local/share/com.vercel.cli/* ~/.config/com.vercel.cli/`
+
+### Sync
+
 ```bash
 vercelgate sync
 ```
 
 Syncs your current logged-in Vercel account with vercelgate.
 
+### New Account
+
 ```bash
 vercelgate new
 ```
 
-This command clears the current Vercel account configuration. After running this, you can add a new Vercel account using `vercel login` and then run `vercelgate sync` to add it to vercelgate.
+Clears the current Vercel account configuration. After running this, you can add a new Vercel account using `vercel login` and then run `vercelgate sync` to add it to vercelgate.
+
+### Switch Account
 
 ```bash
 vercelgate switch
@@ -63,17 +87,23 @@ vercelgate switch
 
 Displays a list of all synced Vercel accounts, allowing you to choose which account to set as active.
 
+### Switch Team
+
 ```bash
 vercelgate switchteam
 ```
 
 Shows a list of all synced Vercel accounts and their teams, allowing you to select a team to set as the current team.
 
+### Show Config Path
+
 ```bash
 vercelgate path
 ```
 
 Displays the Vercel global configuration path where settings and authentication data are stored.
+
+### Reset
 
 ```bash
 vercelgate reset
