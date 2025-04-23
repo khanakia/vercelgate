@@ -23,6 +23,13 @@ vercelgate --help
 vercelgate init
 ```
 
+## Ubuntu
+
+For ubuntu vercel configuration is stored in `~/.local/share/com.vercel.cli/` instead of `~/.config/com.vercel.cli/`
+
+Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.local/share/com.vercel.cli/* ~/.config/com.vercel.cli/`
+
+
 ## Usage
 
 To begin using **vercelgate**, first perform the initialization:
@@ -32,6 +39,7 @@ vercelgate init
 ```
 
 This only needs to be done once. For further guidance on how to use **vercelgate** efficiently, use the help command:
+
 
 ```bash
 vercelgate --help
@@ -56,12 +64,6 @@ vercelgate init
 ```
 
 Initializes vercelgate for first-time use. This command sets up the necessary configuration and database.
-
-## Ubuntu
-
-For ubuntu vercel configuration is stored in `~/.local/share/com.vercel.cli/` instead of `~/.config/com.vercel.cli/`
-
-Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.local/share/com.vercel.cli/* ~/.config/com.vercel.cli/`
 
 ### Sync
 
