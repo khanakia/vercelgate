@@ -31,6 +31,7 @@ func main() {
 	rootCmd.AddCommand(resetCmd)
 	rootCmd.AddCommand(switchCmd)
 	rootCmd.AddCommand(switchTeamCmd)
+	rootCmd.AddCommand(pathCmd)
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -241,6 +242,19 @@ var resetCmd = &cobra.Command{
 		}
 
 		fmt.Println("state reset was successful")
+	},
+}
+
+var pathCmd = &cobra.Command{
+	Use:   "path",
+	Short: "Show Vercel global configuration path",
+	Run: func(cmd *cobra.Command, args []string) {
+		globalPath, err := vercelutil.GetGlobalPathConfig()
+		if err != nil {
+			log.Fatal(err)
+			return
+		}
+		fmt.Printf("Vercel global configuration path: %s\n", globalPath)
 	},
 }
 
