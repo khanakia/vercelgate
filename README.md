@@ -31,6 +31,9 @@ Make sure you create a Symlink: `mkdir -p ~/.config/com.vercel.cli && ln -s ~/.l
 
 
 ## Usage
+> [!IMPORTANT]  
+> Make sure you first login with `vercel login` with any default email account so all the necessary configs gets created by vercel cli tool before using vercelgate
+
 
 To begin using **vercelgate**, first perform the initialization:
 
