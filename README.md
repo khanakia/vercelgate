@@ -46,7 +46,7 @@ Sync current logged in vercel account with vercelgate
 ```bash
 vercelgate new
 ```
-Once synced this command will empty the current vercel account and now you add new vercel account `vercel login` and then `vercel sycn` again now the previously logged in account and the new one both are sycned with vercelgate
+Once synced this command will empty the current vercel account and now you add new vercel account `vercel login` and then `vercel sync` again now the previously logged in account and the new one both are syced with vercelgate
 
 
 
